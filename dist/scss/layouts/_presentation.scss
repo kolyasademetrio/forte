@@ -1,0 +1,69 @@
+.presentation {
+  background-color: #121213;
+  background: #121213 url('../images/presentation_bg.jpg') center center no-repeat;
+  background-size: cover;
+
+  @media screen and (max-width: $phone-media) {
+    background-image: url('../images/presentation_bg_mobile.jpg');
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 883px;
+    gap: 10px;
+
+    @media screen and (max-width: $tablet-media) {
+      min-height: 0;
+      padding-top: 180px;
+      padding-bottom: 180px;
+    }
+  }
+
+  &__title {
+    color: $white;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: $bold;
+    font-size: 36px;
+    line-height: 1.72;
+
+    @media screen and (max-width: $tablet-media) {
+      font-size: 30px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 20px;
+    font-family: $medium;
+    line-height: 1.6;
+    text-align: center;
+    color: $white;
+    max-width: 657px;
+
+    @media screen and (max-width: $tablet-media) {
+      font-size: 18px;
+    }
+  }
+
+  &__btnWrap {
+    padding: 40px 0 0;
+  }
+
+  &__btn {
+    color: $blue;
+    font-family: $extrabold;
+    font-size: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__btnIcon {
+    width: 30px;
+    height: 30px;
+  }
+}

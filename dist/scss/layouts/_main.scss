@@ -12,7 +12,7 @@ h3,
 h4,
 h5,
 h6 {
-  padding: 15px 0;
+  padding: 0;
 }
 
 p {
@@ -53,4 +53,8 @@ img {
 
 body.navigation-opened {
   overflow: hidden;
+}
+
+.accent-color {
+  color: $blue;
 }
