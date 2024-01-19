@@ -224,10 +224,6 @@ li {
   list-style: none;
 }
 
-p {
-  text-transform: uppercase;
-}
-
 body.error404 main.content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1410,7 +1406,7 @@ h3,
 h4,
 h5,
 h6 {
-  padding: 15px 0;
+  padding: 0;
 }
 
 p {
@@ -1467,5 +1463,92 @@ img {
 
 body.navigation-opened {
   overflow: hidden;
+}
+
+.accent-color {
+  color: #51ADE5;
+}
+
+.presentation {
+  background-color: #121213;
+  background: #121213 url("../images/presentation_bg.jpg") center center no-repeat;
+  background-size: cover;
+}
+@media screen and (max-width: 480px) {
+  .presentation {
+    background-image: url("../images/presentation_bg_mobile.jpg");
+  }
+}
+.presentation__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 883px;
+  gap: 10px;
+}
+@media screen and (max-width: 767px) {
+  .presentation__inner {
+    min-height: 0;
+    padding-top: 180px;
+    padding-bottom: 180px;
+  }
+}
+.presentation__title {
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "encodesansexpanded-bold", sans-serif;
+  font-size: 36px;
+  line-height: 1.72;
+}
+@media screen and (max-width: 767px) {
+  .presentation__title {
+    font-size: 30px;
+  }
+}
+.presentation__subtitle {
+  font-size: 20px;
+  font-family: "encodesansexpanded-medium", sans-serif;
+  line-height: 1.6;
+  text-align: center;
+  color: #fff;
+  max-width: 657px;
+}
+@media screen and (max-width: 767px) {
+  .presentation__subtitle {
+    font-size: 18px;
+  }
+}
+.presentation__btnWrap {
+  padding: 40px 0 0;
+}
+.presentation__btn {
+  color: #51ADE5;
+  font-family: "encodesansexpanded-extrabold", sans-serif;
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+.presentation__btnIcon {
+  width: 30px;
+  height: 30px;
 }
 /*# sourceMappingURL=style.css.map */
