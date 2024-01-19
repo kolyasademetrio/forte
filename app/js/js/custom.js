@@ -19,68 +19,71 @@ $(function () {
       });
    }
 
-   if ($(".js-gallery").length) {
-      $(".js-gallery").magnificPopup({
-         delegate: "a",
-         type: "image",
-         tLoading: "Loading image #%curr%...",
-         mainClass: "mfp-img-mobile",
-         gallery: {
-            enabled: true,
-            navigateByImgClick: true,
-         },
-         image: {
-            tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-         },
-         fixedContentPos: false,
-         removalDelay: 500, //delay removal by X to allow out-animation
-         callbacks: {
-            beforeOpen: function () {
-               // just a hack that adds mfp-anim class to markup
-               this.st.image.markup = this.st.image.markup.replace(
-                  "mfp-figure",
-                  "mfp-figure mfp-with-anim"
-               );
-               this.st.mainClass = this.st.el.attr("data-effect");
-            },
-         },
-      });
-   }
+   //  if ($(".js-gallery").length) {
+   //     $(".js-gallery").magnificPopup({
+   //        delegate: "a",
+   //        type: "image",
+   //        tLoading: "Loading image #%curr%...",
+   //        mainClass: "mfp-img-mobile",
+   //        gallery: {
+   //           enabled: true,
+   //           navigateByImgClick: true,
+   //        },
+   //        image: {
+   //           tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+   //        },
+   //        fixedContentPos: false,
+   //        removalDelay: 500, //delay removal by X to allow out-animation
+   //        callbacks: {
+   //           beforeOpen: function () {
+   //              // just a hack that adds mfp-anim class to markup
+   //              this.st.image.markup = this.st.image.markup.replace(
+   //                 "mfp-figure",
+   //                 "mfp-figure mfp-with-anim"
+   //              );
+   //              this.st.mainClass = this.st.el.attr("data-effect");
+   //           },
+   //        },
+   //     });
+   //  }
 
    /* components */
-   if ($(".js-agency-slider").length) {
-      $(".js-agency-slider").slick({
-         dots: true,
-         autoplay: true,
+   if ($(".js-slider-logos").length) {
+      $(".js-slider-logos").slick({
+         dots: false,
+         arrows: false,
+         autoplay: false,
          infinite: true,
          speed: 300,
-         slidesToShow: 4,
+         //  centerMode: true,
+         variableWidth: true,
+         //  slidesToShow: 6,
          slidesToScroll: 1,
-         nextArrow: '<button type="button" class="slick-next"></button>',
-         prevArrow: '<button type="button" class="slick-prev"></button>',
-         responsive: [
-            {
-               breakpoint: 1024,
-               settings: {
-                  slidesToShow: 3,
-                  slidesToScroll: 1,
-               },
-            },
-            {
-               breakpoint: 768,
-               settings: {
-                  slidesToShow: 2,
-                  slidesToScroll: 1,
-               },
-            },
-            {
-               breakpoint: 476,
-               settings: {
-                  slidesToShow: 1,
-                  slidesToScroll: 1,
-               },
-            },
-         ],
+         //  nextArrow: '<button type="button" class="slick-next"></button>',
+         //  prevArrow: '<button type="button" class="slick-prev"></button>',
+         //  responsive: [
+         //     {
+         //        breakpoint: 1024,
+         //        settings: {
+         //           slidesToShow: 3,
+         //           slidesToScroll: 1,
+         //        },
+         //     },
+         //     {
+         //        breakpoint: 768,
+         //        settings: {
+         //           slidesToShow: 2,
+         //           slidesToScroll: 1,
+         //        },
+         //     },
+         //     {
+         //        breakpoint: 476,
+         //        settings: {
+         //           slidesToShow: 1,
+         //           slidesToScroll: 1,
+         //        },
+         //     },
+         //  ],
       });
    }
 
