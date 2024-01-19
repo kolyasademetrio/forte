@@ -1557,6 +1557,7 @@ body.navigation-opened {
 
 .logos {
   padding: 45px 0;
+  background-color: #F6F7F7;
 }
 @media screen and (max-width: 767px) {
   .logos__inner {
