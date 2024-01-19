@@ -87,6 +87,47 @@ $(function () {
       });
    }
 
+   if ($(".js-slider-feedback").length) {
+      $(".js-slider-feedback").slick({
+         dots: false,
+         arrows: true,
+         autoplay: false,
+         infinite: true,
+         speed: 300,
+         //  centerMode: true,
+         //  variableWidth: true,
+         slidesToShow: 3,
+         slidesToScroll: 1,
+         nextArrow:
+            '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none"><path opacity="0.4" d="M1 14.9707L9 8.14392L1 1.31714" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
+         prevArrow:
+            '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none"><path opacity="0.4" d="M9 1.1792L1 8.00598L9 14.8328" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
+         responsive: [
+            {
+               breakpoint: 1024,
+               settings: {
+                  slidesToShow: 3,
+                  slidesToScroll: 1,
+               },
+            },
+            {
+               breakpoint: 768,
+               settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 1,
+               },
+            },
+            {
+               breakpoint: 480,
+               settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+               },
+            },
+         ],
+      });
+   }
+
    if ($(".js-agency-slider").length) {
       $(window).on("resize orientationchange", function () {
          $(".js-agency-slider").slick("resize");

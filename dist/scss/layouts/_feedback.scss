@@ -1,0 +1,135 @@
+.feedback {
+  background-color: $grey;
+  padding: 110px 0 60px;
+  margin-top: 10px;
+
+  @media screen and (max-width: $phone-media) {
+    padding-top: 95px;
+    padding-bottom: 60px;
+  }
+
+  &__inner {}
+
+  &__title {
+    font-family: $bold;
+    text-transform: uppercase;
+    font-size: 28px;
+    line-height: 1.66;
+    padding-bottom: 40px;
+
+    @media screen and (max-width: $phone-media) {
+      font-size: 24px;
+    }
+  }
+
+  &__list {
+    margin-left: -10px;
+    margin-right: -10px;
+    padding-bottom: 50px;
+
+    .slick-arrow {
+      position: absolute;
+      background-color: transparent;
+      border: none;
+      z-index: 1;
+      bottom: 0;
+
+      @media screen and (max-width: $tablet-media) {
+        display: none !important;
+      }
+
+      &.slick-next {
+        right: -50px;
+
+        @media screen and (max-width: 1300px) {
+          right: 0;
+        }
+      }
+
+      &.slick-prev {
+        left: -50px;
+
+        @media screen and (max-width: 1300px) {
+          left: 0;
+        }
+      }
+    }
+  }
+
+  &__item {
+    max-width: 400px;
+    margin-bottom: 15px;
+
+    @media screen and (max-width: $phone-media) {
+      max-width: 100%;
+    }
+  }
+
+  &__itemInner {
+    padding: 0 10px;
+  }
+
+  &__imgWrap {}
+
+  &__img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  &__itemContent {
+    padding: 10px 25px 20px 18px;
+    background-color: $grey-light;
+  }
+
+  &__logoWrap {
+    width: 125px;
+    height: 45px;
+    padding: 10px 0;
+  }
+
+  &__logo {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: 100%;
+    display: block;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__text {
+    flex-grow: 1;
+  }
+
+  &__itemTitle {
+    font-size: 14px;
+    font-family: $extrabold;
+    color: $black;
+    line-height: 1.42;
+  }
+
+  &__itemDescr {
+    font-size: 12px;
+    font-family: $medium;
+    color: $grey-dark;
+    line-height: 1.42;
+  }
+
+  &__iconWrap {
+    flex-shrink: 0;
+    flex-grow: 0;
+    width: 43px;
+    height: 43px;
+  }
+
+  &__icon {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
