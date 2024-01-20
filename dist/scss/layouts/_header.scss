@@ -3,7 +3,7 @@
   background-color: $black;
   padding: 16px 0;
 
-  @media screen and (max-width: $desktop-middle-media) {
+  @media screen and (max-width: $desktop-wide-media) {
     padding-top: 20px;
     padding-bottom: 20px;
   }
@@ -20,7 +20,7 @@
     max-width: 137px;
     display: block;
 
-    @media screen and (max-width: $desktop-middle-media) {
+    @media screen and (max-width: $desktop-wide-media) {
       max-width: 107px;
     }
   }
@@ -33,7 +33,7 @@
   &__nav {
     position: relative;
 
-    @media screen and (max-width: $desktop-middle-media) {
+    @media screen and (max-width: $desktop-wide-media) {
       display: none;
       position: fixed;
       top: 0;
@@ -63,7 +63,7 @@
       gap: 35px;
     }
 
-    @media screen and (max-width: $desktop-middle-media) {
+    @media screen and (max-width: $desktop-wide-media) {
       flex-direction: column;
       padding-top: 60px;
       padding-bottom: 80px;
@@ -77,14 +77,14 @@
   }
 
   &__btnWrap {
-    @media screen and (max-width: $desktop-middle-media) {
+    @media screen and (max-width: $desktop-wide-media) {
       display: none;
     }
 
     &.m-secondary {
       display: none;
 
-      @media screen and (max-width: $desktop-middle-media) {
+      @media screen and (max-width: $desktop-wide-media) {
         display: block;
       }
     }
@@ -110,7 +110,7 @@
   &__menuBtnWrap {
     display: none;
 
-    @media screen and (max-width: $desktop-middle-media) {
+    @media screen and (max-width: $desktop-wide-media) {
       display: flex;
     }
   }
@@ -137,7 +137,7 @@
   &__navHeader {
     display: none;
 
-    @media screen and (max-width: $desktop-middle-media) {
+    @media screen and (max-width: $desktop-wide-media) {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -145,7 +145,7 @@
   }
 
   // &__btnCloseWrap {
-  //   @media screen and (max-width: $desktop-middle-media) {
+  //   @media screen and (max-width: $desktop-wide-media) {
   //     display: flex;
   //     justify-content: flex-end;
   //     position: absolute;
@@ -166,7 +166,7 @@
 
   @media screen and (max-width: $desktop-wide-media) {}
 
-  @media screen and (max-width: $desktop-media) {}
+  @media screen and (max-width: $tablet-small-media) {}
 
-  @media screen and (max-width: $tablet-media) {}
+  @media screen and (max-width: $mobile-media) {}
 }

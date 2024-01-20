@@ -3,7 +3,7 @@
   background: #121213 url('../images/presentation_bg.jpg') center center no-repeat;
   background-size: cover;
 
-  @media screen and (max-width: $phone-media) {
+  @media screen and (max-width: $mobile-small-media) {
     background-image: url('../images/presentation_bg_mobile.jpg');
   }
 
@@ -15,7 +15,7 @@
     min-height: 883px;
     gap: 10px;
 
-    @media screen and (max-width: $tablet-media) {
+    @media screen and (max-width: $mobile-media) {
       min-height: 0;
       padding-top: 180px;
       padding-bottom: 180px;
@@ -30,7 +30,7 @@
     font-size: 36px;
     line-height: 1.72;
 
-    @media screen and (max-width: $tablet-media) {
+    @media screen and (max-width: $mobile-media) {
       font-size: 30px;
     }
   }
@@ -43,7 +43,7 @@
     color: $white;
     max-width: 657px;
 
-    @media screen and (max-width: $tablet-media) {
+    @media screen and (max-width: $mobile-media) {
       font-size: 18px;
     }
   }

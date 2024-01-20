@@ -1,0 +1,142 @@
+.advantages {
+  background-color: $black;
+  color: $white;
+  padding: 117px 0 120px;
+  background: $black url('../images/advantages-bg-2.jpg') top right no-repeat;
+  background-size: auto 100%;
+
+  @media screen and (max-width: $tablet-media) {
+    background-image: none;
+    padding-top: 0;
+    padding-bottom: 100px;
+  }
+
+  &__inner {}
+
+  &__bg {
+    display: none;
+    height: 370px;
+    background: $black url('../images/advantages-bg-2.jpg') top right no-repeat;
+    background-size: auto 100%;
+    margin-right: -20px;
+    margin-left: -20px;
+
+    @media screen and (max-width: $tablet-media) {
+      display: block;
+    }
+
+    @media screen and (max-width: $mobile-small-media) {
+      background: $black url('../images/advantages-bg-mobile.jpg') top right no-repeat;
+      background-size: auto 100%;
+    }
+  }
+
+  &__content {
+    max-width: 650px;
+
+    @media screen and (max-width: $desktop-wide-media) {
+      max-width: 450px;
+    }
+
+    @media screen and (max-width: $tablet-media) {
+      padding-top: 30px;
+      max-width: 100%;
+    }
+  }
+
+  &__title {
+    font-size: 28px;
+    line-height: 1.42;
+    font-family: $bold;
+    text-transform: uppercase;
+    padding: 0 0 20px;
+    color: $white;
+
+    @media screen and (max-width: $tablet-media) {
+      font-size: 24px;
+    }
+  }
+
+  &__text {
+    color: $white;
+    font-family: $medium;
+    font-size: 18px;
+    line-height: 1.55;
+    padding: 0 0 60px;
+
+    @media screen and (max-width: $tablet-media) {
+      font-size: 16px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    max-width: 370px;
+
+    @media screen and (max-width: $tablet-media) {
+      gap: 72px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 40px;
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 5px;
+      font-family: $regular;
+      color: $white;
+      font-size: 24px;
+      line-height: 1;
+      transform: rotate(-90deg)
+    }
+
+    &:nth-child(1):before {
+      content: '01';
+    }
+
+    &:nth-child(2):before {
+      content: '02';
+    }
+
+    &:nth-child(3):before {
+      content: '03';
+    }
+  }
+
+  &__itemInner {}
+
+  &__itemTitle {
+    text-transform: uppercase;
+    color: $white;
+    font-size: 20px;
+    line-height: 1.4;
+    font-family: $extrabold;
+    padding: 0 0 17px;
+  }
+
+
+  &__itemText {
+    color: $white;
+    font-size: 14px;
+    line-height: 1.57;
+    font-family: $regular;
+  }
+
+  &__itemLink {
+    color: $white;
+    position: relative;
+
+    &:after {
+      content: url('../images/chevron-right-radius.svg');
+      display: inline-block;
+      margin-left: 20px;
+    }
+  }
+}
