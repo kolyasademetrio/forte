@@ -1463,6 +1463,9 @@ img {
 .container.wide {
   max-width: 1440px;
 }
+.container.full {
+  max-width: 100%;
+}
 
 body.navigation-opened {
   overflow: hidden;
@@ -1859,5 +1862,89 @@ body.navigation-opened {
   content: url("../images/chevron-right-radius.svg");
   display: inline-block;
   margin-left: 20px;
+}
+
+.statistic {
+  margin: 10px 0 0;
+}
+.statistic .container {
+  padding-left: 0;
+  padding-right: 0;
+}
+@media screen and (max-width: 767px) {
+  .statistic .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+.statistic__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: -5px;
+  margin-right: -5px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.statistic__item {
+  width: 33.3333%;
+  padding: 0 5px 10px;
+}
+@media screen and (max-width: 767px) {
+  .statistic__item {
+    width: 100%;
+  }
+}
+.statistic__itemInner {
+  background: #F6F7F7;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 66px 10px;
+  gap: 10px;
+}
+.statistic__item:nth-child(1) .statistic__itemInner {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+@media screen and (max-width: 767px) {
+  .statistic__item:nth-child(1) .statistic__itemInner {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+}
+.statistic__item:nth-child(3) .statistic__itemInner {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+@media screen and (max-width: 767px) {
+  .statistic__item:nth-child(3) .statistic__itemInner {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+}
+.statistic__header {
+  font-family: "encodesansexpanded-bold", sans-serif;
+  font-size: 48px;
+  line-height: 1;
+}
+.statistic__footer {
+  font-family: "encodesansexpanded-medium", sans-serif;
+  font-size: 18px;
+  line-height: 1.4;
 }
 /*# sourceMappingURL=style.css.map */
