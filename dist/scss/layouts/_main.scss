@@ -53,6 +53,10 @@ img {
   &.wide {
     max-width: $max-width-wide;
   }
+
+  &.full {
+    max-width: 100%;
+  }
 }
 
 body.navigation-opened {
