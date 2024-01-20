@@ -1947,4 +1947,68 @@ body.navigation-opened {
   font-size: 18px;
   line-height: 1.4;
 }
+
+.partnership {
+  padding: 60px 0 30px;
+}
+@media screen and (max-width: 767px) {
+  .partnership {
+    padding-top: 50px;
+    padding-bottom: 35px;
+  }
+}
+.partnership__title {
+  font-size: 28px;
+  line-height: 48px;
+  color: #000;
+  font-family: "encodesansexpanded-bold", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0 0 48px;
+}
+@media screen and (max-width: 767px) {
+  .partnership__title {
+    font-size: 24px;
+    padding-bottom: 20px;
+  }
+}
+.partnership__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+.partnership__item {
+  width: 20%;
+  padding: 0 20px 28px;
+}
+@media screen and (max-width: 767px) {
+  .partnership__item {
+    width: 33.3333%;
+    padding-bottom: 20px;
+  }
+}
+.partnership__itemInner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.partnership__link {
+  display: block;
+}
+.partnership__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 200px;
+}
 /*# sourceMappingURL=style.css.map */

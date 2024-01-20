@@ -1,0 +1,60 @@
+.partnership {
+  padding: 60px 0 30px;
+
+  @media screen and (max-width: $mobile-media) {
+    padding-top: 50px;
+    padding-bottom: 35px;
+  }
+
+  &__inner {}
+
+  &__title {
+    font-size: 28px;
+    line-height: 48px;
+    color: $black;
+    font-family: $bold;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0 0 48px;
+
+    @media screen and (max-width: $mobile-media) {
+      font-size: 24px;
+      padding-bottom: 20px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+
+  &__item {
+    width: 20%;
+    padding: 0 20px 28px;
+
+    @media screen and (max-width: $mobile-media) {
+      width: 33.3333%;
+      padding-bottom: 20px;
+    }
+  }
+
+  &__itemInner {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__link {
+    display: block;
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+  }
+}
