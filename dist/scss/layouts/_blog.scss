@@ -1,0 +1,139 @@
+.blog {
+  padding: 120px 0 100px;
+  margin: 10px 0 0;
+  background: $grey;
+
+  &__inner {}
+
+  &__title {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0 0 60px;
+    color: $black;
+    font-size: 28px;
+    line-height: 1.42;
+    font-family: $bold;
+
+    @media screen and (max-width: $mobile-media) {
+      font-size: 24px;
+      padding-bottom: 28px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+
+  &__item {
+    width: 50%;
+    padding: 0 10px 20px;
+
+    @media screen and (max-width: $tablet-small-media) {
+      width: 100%;
+    }
+  }
+
+  &__itemInner {
+    background-color: $grey-light;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: $mobile-media) {
+      flex-direction: column;
+    }
+  }
+
+  &__itemHeader {
+    width: 245px;
+    height: 356px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    object-fit: cover;
+
+    @media screen and (max-width: $mobile-media) {
+      width: 100%;
+      height: 172px;
+    }
+  }
+
+  &__itenImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    @media screen and (max-width: $mobile-media) {
+      display: none;
+    }
+
+    &.m-secondary {
+      display: none;
+
+      @media screen and (max-width: $mobile-media) {
+        display: block;
+      }
+    }
+  }
+
+  &__content {
+    padding: 30px 28px 21px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media screen and (max-width: $mobile-media) {
+      padding: 20px;
+    }
+  }
+
+  &__itemTitle {
+    font-size: 14px;
+    line-height: 1.57;
+    color: $grey-dark-2;
+    font-family: $regular;
+    font-weight: 400;
+
+    @media screen and (max-width: $mobile-media) {
+      padding-bottom: 20px;
+    }
+  }
+
+  &__itemText {
+    position: relative;
+
+    &:after {
+      content: url("../images/chevron-right-radius.svg");
+      display: block;
+      position: absolute;
+      bottom: 5px;
+      right: 0;
+      width: 9px;
+      height: 14px;
+
+      @media screen and (max-width: $mobile-media) {
+        left: 0;
+        right: auto;
+        bottom: 0;
+      }
+    }
+  }
+
+  &__paragraph {
+    line-height: 1.55;
+    font-size: 18px;
+    font-family: $medium;
+    margin-right: 40px;
+
+    @media screen and (max-width: $mobile-media) {
+      margin-right: 0;
+      margin-bottom: 27px;
+      font-size: 16px;
+    }
+  }
+}
