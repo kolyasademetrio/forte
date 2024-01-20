@@ -66,3 +66,20 @@ body.navigation-opened {
 .accent-color {
   color: $blue;
 }
+
+.btn {
+  padding: 11px 22px 10px 22px;
+  color: $white;
+  font-family: $extrabold;
+  line-height: 1.2;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $blue;
+  border-radius: 10px;
+  white-space: nowrap;
+  border: none;
+  height: 48px;
+  gap: 19px;
+}
