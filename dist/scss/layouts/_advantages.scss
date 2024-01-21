@@ -132,11 +132,5 @@
   &__itemLink {
     color: $white;
     position: relative;
-
-    &:after {
-      content: url('../images/chevron-right-radius.svg');
-      display: inline-block;
-      margin-left: 20px;
-    }
   }
 }
