@@ -83,3 +83,11 @@ body.navigation-opened {
   height: 48px;
   gap: 19px;
 }
+
+.arrowAfter {
+  &:after {
+    content: url('../images/chevron-right-radius.svg');
+    display: inline-block;
+    margin-left: 20px;
+  }
+}
