@@ -17,6 +17,7 @@
     background-position: left 410px;
     background-repeat: no-repeat;
     background-size: 275px 84px;
+    padding-bottom: 0;
   }
 
   &__inner {}
@@ -167,6 +168,43 @@
 
     .total {
       font-size: 14px;
+    }
+  }
+}
+
+.ourWorks {
+  background-color: $grey;
+  padding: 100px 0 140px;
+  margin-top: 10px;
+
+  @media screen and (max-width: $mobile-media) {
+    padding-bottom: 100px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+
+    @media screen and (max-width: $mobile-media) {
+      justify-content: flex-start;
+    }
+  }
+
+  &__img {
+    display: block;
+    max-width: 954px;
+
+    @media screen and (max-width: $mobile-media) {
+      display: none;
+    }
+
+    &.m-secondary {
+      display: none;
+      max-width: 330px;
+
+      @media screen and (max-width: $mobile-media) {
+        display: block;
+      }
     }
   }
 }
