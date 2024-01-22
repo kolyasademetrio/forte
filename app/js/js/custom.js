@@ -55,35 +55,8 @@ $(function () {
          autoplay: false,
          infinite: true,
          speed: 300,
-         //  centerMode: true,
          variableWidth: true,
-         //  slidesToShow: 6,
          slidesToScroll: 1,
-         //  nextArrow: '<button type="button" class="slick-next"></button>',
-         //  prevArrow: '<button type="button" class="slick-prev"></button>',
-         //  responsive: [
-         //     {
-         //        breakpoint: 1024,
-         //        settings: {
-         //           slidesToShow: 3,
-         //           slidesToScroll: 1,
-         //        },
-         //     },
-         //     {
-         //        breakpoint: 768,
-         //        settings: {
-         //           slidesToShow: 2,
-         //           slidesToScroll: 1,
-         //        },
-         //     },
-         //     {
-         //        breakpoint: 476,
-         //        settings: {
-         //           slidesToShow: 1,
-         //           slidesToScroll: 1,
-         //        },
-         //     },
-         //  ],
       });
    }
 
@@ -128,166 +101,72 @@ $(function () {
       });
    }
 
-   if ($(".js-agency-slider").length) {
-      $(window).on("resize orientationchange", function () {
-         $(".js-agency-slider").slick("resize");
+   if ($(".js-slider-technology").length) {
+      let $status = $(".js-slider-technology").next().find(".js-slider-technology-qty");
+      $(".js-slider-technology").on(
+         "init reInit afterChange",
+         function (event, slick, currentSlide, nextSlide) {
+            //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
+            let i = (currentSlide ? currentSlide : 0) + 1;
+            $status.html(
+               i + '/<span class="projects__slider-qty_sm">' + slick.slideCount + "</span>"
+            );
+            $status.html(
+               `<div class="current">${i}</div>
+               <div class="delimiter">/</div>
+               <div class="total">${slick.slideCount}</div>`
+            );
+         }
+      );
+
+      let $prev = $(".js-slider-technology").next().find(".js-slider-technology-prev");
+      let $next = $(".js-slider-technology").next().find(".js-slider-technology-next");
+
+      $(".js-slider-technology").slick({
+         dots: false,
+         arrows: true,
+         autoplay: false,
+         infinite: true,
+         speed: 300,
+         slidesToScroll: 1,
+         slidesToShow: 1,
+         nextArrow: $next,
+         prevArrow: $prev,
       });
    }
 
-   if ($(".fake-iframe").length) {
-      $(".fake-iframe").each(function () {
-         $(document).delegate("#" + this.id, "click", function () {
-            let iframe_url = "";
-            if (this.getAttribute("data-youtube-vimeo") == "youtube") {
-               iframe_url = "https://www.youtube.com/embed/" + this.id + "?autoplay=1&autohide=1";
-            } else if (this.getAttribute("data-youtube-vimeo") == "vimeo") {
-               iframe_url =
-                  "https://player.vimeo.com/video/" +
-                  this.id +
-                  "?color&amp;autoplay=1&amp;loop=0&amp;muted=0&amp;title=1&amp;portrait=1&amp;byline=1#t=";
-            }
+   //  if ($(".js-agency-slider").length) {
+   //     $(window).on("resize orientationchange", function () {
+   //        $(".js-agency-slider").slick("resize");
+   //     });
+   //  }
 
-            const iframe =
-               '<iframe width="' +
-               $(this).width() +
-               '" height="' +
-               $(this).height() +
-               '" src="' +
-               iframe_url +
-               '" frameborder="0" allowfullscreen=""></iframe>';
+   //  if ($(".fake-iframe").length) {
+   //     $(".fake-iframe").each(function () {
+   //        $(document).delegate("#" + this.id, "click", function () {
+   //           let iframe_url = "";
+   //           if (this.getAttribute("data-youtube-vimeo") == "youtube") {
+   //              iframe_url = "https://www.youtube.com/embed/" + this.id + "?autoplay=1&autohide=1";
+   //           } else if (this.getAttribute("data-youtube-vimeo") == "vimeo") {
+   //              iframe_url =
+   //                 "https://player.vimeo.com/video/" +
+   //                 this.id +
+   //                 "?color&amp;autoplay=1&amp;loop=0&amp;muted=0&amp;title=1&amp;portrait=1&amp;byline=1#t=";
+   //           }
 
-            $(this).find(".fake-iframe__play").remove();
+   //           const iframe =
+   //              '<iframe width="' +
+   //              $(this).width() +
+   //              '" height="' +
+   //              $(this).height() +
+   //              '" src="' +
+   //              iframe_url +
+   //              '" frameborder="0" allowfullscreen=""></iframe>';
 
-            $(this).append(iframe);
-         });
-      });
-   }
+   //           $(this).find(".fake-iframe__play").remove();
 
-   /* viewport width */
-   function viewport() {
-      var e = window,
-         a = "inner";
-      if (!("innerWidth" in window)) {
-         a = "client";
-         e = document.documentElement || document.body;
-      }
-      return { width: e[a + "Width"], height: e[a + "Height"] };
-   }
-
-   function handler() {
-      var height_footer = $("footer").height();
-      var height_header = $("header").height();
-      //$('.content').css({'padding-bottom':height_footer+40, 'padding-top':height_header+40});
-      var viewport_wid = viewport().width;
-      var viewport_height = viewport().height;
-
-      if (viewport_wid > 1024) {
-         $(".nav.m-secondary").removeClass("m-active");
-      }
-   }
-   $(window).bind("load", handler);
-   $(window).bind("resize", handler);
-
-   function getSelectedSection() {
-      const sections = document.querySelectorAll(".js-section");
-      let elements = [];
-      for (let i = 0; i < sections.length; i++) {
-         let sectionTop = sections[i].offsetTop;
-         let sectionId = sections[i].getAttribute("id");
-         let element = {};
-         element.offsetTop = sectionTop;
-         element.id = sectionId;
-         elements.push(element);
-         console.log(elements);
-         console.log(element);
-      }
-      return elements;
-   }
-
-   function setSelectedSection() {
-      let sections = getSelectedSection();
-      let items = Array.from(document.querySelectorAll(".nav__item"));
-      $(window).scroll(function () {
-         for (let i = 0; i < sections.length; i++) {
-            let section = sections[i];
-            let id = section.id;
-            for (let j = 0; j < items.length; j++) {
-               if ($(window).scrollTop() > section.offsetTop - 50) {
-                  let item = items[j];
-                  console.log(section);
-                  console.log(item);
-                  let link = item.children;
-                  item.classList.remove("m-active");
-                  if (link.item(0).getAttribute("href") == `#${id}`) {
-                     item.classList.add("m-active");
-                  }
-               }
-            }
-         }
-      });
-   }
-   setSelectedSection();
-
-   function getRandomInt(min, max) {
-      return Math.round(Math.random() * (max - min) + min);
-   }
-
-   function setRandomWidth() {
-      if ($(window).width() > 1024) {
-         if ($(".js-photo").length && $(".js-photo .photo__item").length) {
-            const photos = Array.from(document.querySelectorAll(".js-photo .photo__item"));
-            let width = 0;
-            for (let i = 0; i < photos.length; i++) {
-               let photo = photos[i];
-               let randomWidth = getRandomInt(18, 27);
-
-               if (i % 4 == 0) {
-                  photo.style.width = `calc(${100 - width}% - ${10}px) `;
-                  width = 0;
-               } else {
-                  photo.style.width = `calc(${randomWidth}% - ${10}px)`;
-                  width = width + randomWidth;
-               }
-               if ($(window).width() >= 767 && $(window).width() < 1024) {
-                  photo.style.width = `calc(${33.33}% - ${10}px)`;
-               }
-               if ($(window).width() >= 476 && $(window).width() < 767) {
-                  photo.style.width = `calc(${50}% - ${10}px)`;
-               }
-               if ($(window).width() < 476) {
-                  photo.style.width = `${100}%`;
-               }
-            }
-         }
-      }
-   }
-   $(window).resize(setRandomWidth);
-   setRandomWidth();
-
-   window.addEventListener("scroll", addApropriateClass);
-   window.addEventListener("resize", addApropriateClass);
-
-   function addApropriateClass() {
-      let $elements = null;
-      let windowHeight = null;
-
-      init();
-      checkElementPositiont();
-
-      function init() {
-         $elements = document.querySelectorAll(".js-animate");
-         windowHeight = window.innerHeight;
-      }
-
-      function checkElementPositiont() {
-         for (let i = 0; i < $elements.length; i++) {
-            let element = $elements[i];
-            let positionFromTop = element.getBoundingClientRect().top;
-            if (positionFromTop - windowHeight <= 0) {
-               element.classList.add("m-animated");
-               element.classList.remove("js-animate");
-            }
-         }
-      }
-   }
+   //           $(this).append(iframe);
+   //        });
+   //     });
+   //  }
 });
