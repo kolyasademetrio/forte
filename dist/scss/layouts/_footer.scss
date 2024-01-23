@@ -1,1 +1,196 @@
-.footer {}
+.footer {
+  background-color: $black;
+  padding: 10px 0 20px;
+
+  .footerTop {
+    &__inner {
+      display: flex;
+      justify-content: space-between;
+      border-top: 1px solid #323233;
+
+      padding-top: 75px;
+
+      @media screen and (max-width: $desktop-wide-media) {
+        flex-wrap: wrap;
+      }
+    }
+
+    &__item {
+      max-width: 250px;
+      flex-shrink: 0;
+      flex-grow: 1;
+
+      &.m-primary {
+        flex-grow: 2;
+        padding-right: 100px;
+
+        @media screen and (max-width: $desktop-wide-media) {
+          width: 100%;
+          max-width: 100%;
+          order: 4;
+        }
+      }
+
+      &.m-secondary {
+        @media screen and (max-width: $desktop-wide-media) {
+          order: 1;
+        }
+      }
+
+      &.m-tertiary {
+        @media screen and (max-width: $desktop-wide-media) {
+          order: 2;
+        }
+      }
+
+      &.m-quaternary {
+        @media screen and (max-width: $desktop-wide-media) {
+          order: 3;
+        }
+      }
+    }
+
+    &__logoWrap {
+      max-width: 107px;
+    }
+
+    &__logoLink {
+      display: block;
+    }
+
+    &__logoImg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    &__formWrap {}
+
+    &__form {}
+
+    &__formInner {}
+
+    &__formRow {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    &__formTitle {
+      text-transform: uppercase;
+      font-family: $bold;
+      font-size: 14px;
+      line-height: 1.55;
+      color: $white;
+      padding: 50px 0 10px;
+    }
+
+    &__formGroup {
+      flex-shrink: 0;
+      flex-grow: 1;
+
+      &.m-secondary {
+        flex-shrink: 1;
+        padding-top: 18px;
+        flex-grow: 0;
+      }
+    }
+
+    &__formLabel {
+      font-size: 8px;
+      line-height: 1.55;
+      color: #666;
+      font-family: $medium;
+      padding: 0 0 5px;
+      display: block;
+      width: 100%;
+    }
+
+    &__formField {
+      background-color: transparent;
+      border-radius: 5px;
+      border: 1px solid $white;
+      padding: 7px 10px;
+      height: 30px;
+      width: 100%;
+    }
+
+    &__formButton {
+      height: 30px;
+      font-size: 10px;
+      font-family: $extrabold;
+      border-radius: 5px;
+    }
+
+    &__checkbox {}
+
+    &__checkboxlabel {}
+
+    &__socialsWrap {}
+
+    &__socials {
+      display: flex;
+      justify-content: flex-start;
+      align-items: baseline;
+      gap: 30px;
+    }
+
+    &__socialsItem {
+      display: flex;
+      align-items: center;
+    }
+
+    &__socialsLink {
+      display: block;
+    }
+
+    &__socialsIcon {
+      width: 15px;
+      display: block;
+
+      &.facebook {
+        width: 8px;
+      }
+    }
+
+
+
+    &__itemContent {}
+
+    &__itemTitle {
+      font-size: 14px;
+      line-height: 1.55;
+      color: $white;
+      text-transform: uppercase;
+      font-family: $bold;
+      padding: 0 0 12px;
+    }
+
+    &__itemMenu {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    &__itemMenuItem {}
+
+    &__itemMenuItemLink {
+      font-family: $medium;
+      color: $white;
+      font-size: 12px;
+      line-height: 1.55;
+
+      &.m-secondary {
+        font-family: $extrabold;
+      }
+    }
+
+    &__itemAddress {
+      color: #666;
+      font-size: 12px;
+      line-height: 1.55;
+      font-family: $medium;
+      padding: 35px 0 0;
+    }
+  }
+}

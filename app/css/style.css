@@ -152,9 +152,9 @@ textarea {
   color: #333;
   font-family: "encodesansexpanded-regular", sans-serif;
   outline: none;
-  border-radius: 0;
-  -moz-border-radius: 0;
-  -webkit-border-radius: 0;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
   -webkit-appearance: none;
 }
 
@@ -1393,6 +1393,201 @@ img.mfp-img {
   padding: 0;
   display: block;
 }
+.footer {
+  background-color: #000;
+  padding: 10px 0 20px;
+}
+.footer .footerTop__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-top: 1px solid #323233;
+  padding-top: 75px;
+}
+@media screen and (max-width: 1200px) {
+  .footer .footerTop__inner {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+.footer .footerTop__item {
+  max-width: 250px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.footer .footerTop__item.m-primary {
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  padding-right: 100px;
+}
+@media screen and (max-width: 1200px) {
+  .footer .footerTop__item.m-primary {
+    width: 100%;
+    max-width: 100%;
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .footer .footerTop__item.m-secondary {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .footer .footerTop__item.m-tertiary {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .footer .footerTop__item.m-quaternary {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+}
+.footer .footerTop__logoWrap {
+  max-width: 107px;
+}
+.footer .footerTop__logoLink {
+  display: block;
+}
+.footer .footerTop__logoImg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.footer .footerTop__formRow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 10px;
+}
+.footer .footerTop__formTitle {
+  text-transform: uppercase;
+  font-family: "encodesansexpanded-bold", sans-serif;
+  font-size: 14px;
+  line-height: 1.55;
+  color: #fff;
+  padding: 50px 0 10px;
+}
+.footer .footerTop__formGroup {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.footer .footerTop__formGroup.m-secondary {
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  padding-top: 18px;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+}
+.footer .footerTop__formLabel {
+  font-size: 8px;
+  line-height: 1.55;
+  color: #666;
+  font-family: "encodesansexpanded-medium", sans-serif;
+  padding: 0 0 5px;
+  display: block;
+  width: 100%;
+}
+.footer .footerTop__formField {
+  background-color: transparent;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  padding: 7px 10px;
+  height: 30px;
+  width: 100%;
+}
+.footer .footerTop__formButton {
+  height: 30px;
+  font-size: 10px;
+  font-family: "encodesansexpanded-extrabold", sans-serif;
+  border-radius: 5px;
+}
+.footer .footerTop__socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  gap: 30px;
+}
+.footer .footerTop__socialsItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.footer .footerTop__socialsLink {
+  display: block;
+}
+.footer .footerTop__socialsIcon {
+  width: 15px;
+  display: block;
+}
+.footer .footerTop__socialsIcon.facebook {
+  width: 8px;
+}
+.footer .footerTop__itemTitle {
+  font-size: 14px;
+  line-height: 1.55;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "encodesansexpanded-bold", sans-serif;
+  padding: 0 0 12px;
+}
+.footer .footerTop__itemMenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+.footer .footerTop__itemMenuItemLink {
+  font-family: "encodesansexpanded-medium", sans-serif;
+  color: #fff;
+  font-size: 12px;
+  line-height: 1.55;
+}
+.footer .footerTop__itemMenuItemLink.m-secondary {
+  font-family: "encodesansexpanded-extrabold", sans-serif;
+}
+.footer .footerTop__itemAddress {
+  color: #666;
+  font-size: 12px;
+  line-height: 1.55;
+  font-family: "encodesansexpanded-medium", sans-serif;
+  padding: 35px 0 0;
+}
+
 html,
 body {
   height: 100%;
